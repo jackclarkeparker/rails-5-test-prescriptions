@@ -126,7 +126,7 @@ GEM
     mini_portile2 (2.8.8)
     minitest (5.25.5)
     msgpack (1.8.0)
-    net-imap (0.4.20)
+    net-imap (0.4.21)
       date
       net-protocol
     net-pop (0.1.2)
@@ -202,10 +202,10 @@ GEM
     rexml (3.4.1)
     rspec-core (3.13.3)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.3)
+    rspec-expectations (3.13.4)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.2)
+    rspec-mocks (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-rails (5.1.2)
@@ -216,7 +216,7 @@ GEM
       rspec-expectations (~> 3.10)
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
-    rspec-support (3.13.2)
+    rspec-support (3.13.3)
     rubocop (1.75.4)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -246,12 +246,12 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.1.0)
-    spring (4.3.0)
+    spring (2.1.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    spring-watcher-listen (2.1.0)
+    spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
-      spring (>= 4)
+      spring (>= 1.2, < 3.0)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
@@ -321,7 +321,7 @@ DEPENDENCIES
   rubocop
   sass-rails!
   selenium-webdriver
-  spring
+  spring (~> 2.1.1)
   spring-commands-rspec
   spring-watcher-listen
   sqlite3 (~> 1.5.4)
