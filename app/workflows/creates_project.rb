@@ -1,11 +1,16 @@
 class CreatesProject
-  attr_reader :name, :project
+  attr_reader :name, :task_string, :project
 
-  def initialize(name:)
+  def initialize(name:, task_string: "")
     @name = name
+    @task_string = task_string
   end
 
   def build
     @project = Project.new(name: name)
+  end
+
+  def convert_string_to_tasks
+    []
   end
 end
