@@ -14,7 +14,8 @@ class CreatesProject
     if task_string.length == 0
       []
     else
-      [Task.new(title: task_string, size: 1)]
+      title, size = task_string.split(":")
+      [Task.new(title: title, size: size || 1)]
     end
   end
 end
