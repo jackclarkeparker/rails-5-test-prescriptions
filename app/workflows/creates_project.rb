@@ -11,6 +11,10 @@ class CreatesProject
   end
 
   def convert_string_to_tasks
-    []
+    if task_string.length == 0
+      []
+    else
+      [Task.new(title: task_string, size: 1)]
+    end
   end
 end
