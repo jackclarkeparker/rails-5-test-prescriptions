@@ -36,5 +36,12 @@ RSpec.describe CreatesProject do
       expect(tasks.size).to eq(1)
       expect(tasks.first).to have_attributes(title: "Start Things", size: 1)
     end
+
+    it "handles a single string with malformed size" do
+      creator = CreatesProject.new(name: "Project Runway", task_string: "Start Things:")
+      tasks = creator.convert_string_to_tasks
+      expect(tasks.size).to eq(1)
+      expect(tasks.first).to have_attributes(title: "Start Things", size: 1)
+    end
   end
 end
