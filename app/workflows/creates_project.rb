@@ -11,12 +11,10 @@ class CreatesProject
   end
 
   def convert_string_to_tasks
-    if task_string.length == 0
-      []
-    else
-      title, size = task_string.split(":")
+    task_string.split("\n").map do |task_substr|
+      title, size =  task_substr.split(":")
       size = size && size.to_i > 0 ? size : 1
-      [Task.new(title: title, size: size)]
+      Task.new(title: title, size: size)
     end
   end
 end

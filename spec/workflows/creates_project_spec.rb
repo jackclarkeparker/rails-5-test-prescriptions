@@ -50,5 +50,15 @@ RSpec.describe CreatesProject do
       expect(tasks.size).to eq(1)
       expect(tasks.first).to have_attributes(title: "Start Things", size: 1)
     end
+
+    it "handles multiple tasks" do
+      creator = CreatesProject.new(name: "Project Runway", task_string: "Start Things:3\nEnd Things:2")
+      tasks = creator.convert_string_to_tasks
+      expect(tasks.size).to eq(2)
+      expect(tasks).to match([
+        an_object_having_attributes(title: "Start Things", size: 3),
+        an_object_having_attributes(title: "End Things", size: 2)
+      ])
+    end
   end
 end
