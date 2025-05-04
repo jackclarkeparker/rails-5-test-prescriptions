@@ -28,6 +28,6 @@ RSpec.describe CreatesProject do
       tasks = creator.convert_string_to_tasks
       expect(tasks.size).to eq(1)
       expect(tasks.first).to have_attributes(title: "With a size", size: 3)
-    
+    end
   end
 end
