@@ -6,9 +6,7 @@ RSpec.describe "adding a project", type: :system do
     fill_in "Name", with: "Project Runway"
     fill_in "Tasks", with: "Choose Fabric:3\nMake it Work:5"
     click_on("Create Project")
-    visit projects_path
     expect(page).to have_content("Project Runway")
-
     expect(page).to have_content(8)
   end
 end
