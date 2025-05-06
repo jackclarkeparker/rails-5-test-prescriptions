@@ -73,7 +73,7 @@ require "rails_helper"
 RSpec.describe CreatesProject do
   let(:creator) { CreatesProject.new(name: name, task_string: task_string) }
   let(:name) { "Project Runway" }
-  let(:task_string) { "Roll out the red carpet:1" }
+  let(:task_string) { "Vacuum the carpet:1" }
 
   describe "initialization" do
     let(:task_string) { "" }
